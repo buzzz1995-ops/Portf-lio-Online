@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruben Silva</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+  <!-- JINJA2 LINK CSS -->
+  <link rel="stylesheet" href="static/ruben_styles.css">
+
+  <!-- Favicons -->
+  <link href="static/images/favicon.png" rel="icon">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">RS</div>
+    <nav class="nav">
+      <a href="#sobre" class="nav-item" data-label="Sobre"><i data-lucide="user"></i></a>
+      <a href="#dados-pessoais" class="nav-item" data-label="Dados Pessoais"><i data-lucide="user-check"></i></a>
+      <a href="#competencias" class="nav-item" data-label="Competências"><i data-lucide="code-2"></i></a>
+      <a href="#historico" class="nav-item" data-label="Experiência"><i data-lucide="briefcase"></i></a>
+      <a href="#portfolio" class="nav-item" data-label="Portfólio"><i data-lucide="layers"></i></a>
+      <a href="#contactos" class="nav-item" data-label="Contactos"><i data-lucide="mail"></i></a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="content">
+
+    <section id="sobre" class="section hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Olá, sou <span id="typing">Ruben Silva</span></h1>
+          <p>
+            Uma década a transformar ideias em aplicações modernas. Vamos criar algo extraordinário?
+          </p>
+        </div>
+        <div class="hero-image">
+          <img src="../static/images/ruben.png" alt="Foto de perfil" class="profile-photo">
+          <!--<img src="../static/images/ruben.png" alt="Ruben Silva" class="profile-img">-->
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+      <p>“Antes do software poder ser reutilizável ele primeiro tem de ser utilizável.” – Ralph Johnson</p>
+    </section>
+
+    <!-- Botão Imprimir CV -->
+    <div class="print-section">
+      <a href="{{ url_for('static', filename='cv.pdf') }}" target="_blank" class="print-btn">Imprimir Currículo</a>
+    </div>
+
+    <section id="dados-pessoais" class="section">
+      <h2>Dados Pessoais</h2>
+      <div class="dados-grid">
+        <div class="dados-card">
+          <i data-lucide="user"></i>
+          <div>
+            <h3>Nome Completo</h3>
+            <p>Ruben Daniel Castro da Silva</p>
+          </div>
+        </div>
+        <div class="dados-card">
+          <i data-lucide="calendar"></i>
+          <div>
+            <h3>Data de Nascimento</h3>
+            <p>6 de Abril de 1995</p>
+          </div>
+        </div>
+        <div class="dados-card">
+          <i data-lucide="map-pin"></i>
+          <div>
+            <h3>Morada</h3>
+            <p>4435-005 Rio Tinto</p>
+          </div>
+        </div>
+        <div class="dados-card">
+          <i data-lucide="phone"></i>
+          <div>
+            <h3>Telefone</h3>
+            <p>+351 915 891 367</p>
+          </div>
+        </div>
+        <div class="dados-card">
+          <i data-lucide="mail"></i>
+          <div>
+            <h3>Email</h3>
+            <p>ruben.cast.silva@gmail.com</p>
+          </div>
+        </div>
+        <div class="dados-card">
+          <i data-lucide="globe"></i>
+          <div>
+            <h3>Língua</h3>
+            <!--<p>Português – Nativo</p>-->
+            <p>Inglês – Avançado</p>
+          </div>
+        </div>
+
+        <!-- Novos dados pessoais -->
+        <div class="dados-card">
+          <i data-lucide="credit-card"></i>
+          <div>
+            <h3>Carta de Condução</h3>
+            <p>B + A</p>
+          </div>
+        </div>
+        <div class="dados-card">
+          <i data-lucide="heart"></i>
+          <div>
+            <h3>Estado Civil</h3>
+            <p>Casado</p>
+          </div>
+        </div>
+        <div class="dados-card">
+          <i data-lucide="clock"></i>
+          <div>
+            <h3>Disponibilidade</h3>
+            <p>Imediata</p>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+
+
+    <section id="competencias" class="section">
+      <h2>Competências</h2>
+
+
+      <!-- Tecnologias detalhadas -->
+      <div class="tech-list">
+        <p><strong>Frontend:</strong> HTML, JavaScript, CSS e Bootstrap</p>
+        <p><strong>Backend:</strong> ASP.NET, Python, SQL Server e MySQL</p>
+      </div>
+
+
+      <div class="skills">
+        <div class="skill">
+          <span>HTML</span>
+          <div class="bar">
+            <div style="width:100%"><span id="percentagem">100%</span></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <span>ASP.NET</span>
+          <div class="bar">
+            <div style="width:100%"><span id="percentagem">100%</span></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <span>JavaScript</span>
+          <div class="bar">
+            <div style="width:60%"><span id="percentagem">70%</span></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <span>Python</span>
+          <div class="bar">
+            <div style="width:80%"><span id="percentagem">80%</span></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <span>CSS</span>
+          <div class="bar">
+            <div style="width:60%"><span id="percentagem">70%</span></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <span>SQL Server</span>
+          <div class="bar">
+            <div style="width:100%"><span id="percentagem">90%</span></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <span>Bootstrap</span>
+          <div class="bar">
+            <div style="width:100%"><span id="percentagem">100%</span></div>
+          </div>
+        </div>
+        
+        <div class="skill">
+          <span>MySQL</span>
+          <div class="bar">
+            <div style="width:100%"><span id="percentagem">90%</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="competencias-pessoais" class="section">
+      <h2>Competências Pessoais</h2>
+      <div class="personal-skills">
+        <div class="personal-skill">
+          <i data-lucide="users"></i>
+          <p>Trabalho em equipa</p>
+        </div>
+        <div class="personal-skill">
+          <i data-lucide="message-circle"></i>
+          <p>Comunicação</p>
+        </div>
+        <div class="personal-skill">
+          <i data-lucide="clock"></i>
+          <p>Gestão de tempo</p>
+        </div>
+        <div class="personal-skill">
+          <i data-lucide="zap"></i>
+          <p>Resolução de problemas</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="historico" class="section">
+      <h2>Experiência</h2>
+      <div class="timeline">
+        <!-- Curso mais recente -->
+        <div class="timeline-item">
+          <div class="timeline-content left">
+            <div class="card">
+              <span class="date">04/2025 - 10/2025</span>
+              <h3>Curso de Programação em Python</h3>
+              <p>PROGRAMA JOVEM + DIGITAL | Porto, Portugal</p>
+              <p><a href="https://www.iefp.pt/ativar.pt" target="_blank">www.iefp.pt/ativar.pt</a></p>
+              <ul>
+                <li>Programação - Python (Django + Flask + Pandas)</li>
+                <li>Base Dados - MySQL</li>
+                <li>Design - HTML, CSS e Javascript</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Segundo trabalho -->
+        <div class="timeline-item">
+          <div class="timeline-content right">
+            <div class="card">
+              <span class="date">07/2017 - 12/2024</span>
+              <h3>Programador Web e Multimédia</h3>
+              <p>Sol Software | Porto, Portugal</p>
+              <p><a href="https://www.solsoftware.pt" target="_blank">www.solsoftware.pt</a></p>
+              <ul>
+                <li>Programação - Visual Basic (ASP.NET)</li>
+                <li>Base Dados - SQL Server</li>
+                <li>Design - HTML, Bootstrap, CSS e Javascript</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Primeiro trabalho -->
+        <div class="timeline-item">
+          <div class="timeline-content left">
+            <div class="card">
+              <span class="date">04/2014 - 07/2014</span>
+              <h3>Estágio Escolar Programador</h3>
+              <p>WeMake | Vila Nova de Gaia, Portugal</p>
+              <p><a href="https://www.wemake.pt" target="_blank">www.wemake.pt</a></p>
+              <ul>
+                <li>Desenvolvimento Web - Laravel</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="section">
+      <h2>Portfólio</h2>
+      <div class="portfolio-grid">
+
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/cs.jpg') }}" alt="CorporateSport">
+          <div class="card-header">
+            <h3>CorporateSport</h3>
+            <button class="btn-ver-projeto" data-link="https://corporatesports.pt/">Ver Projeto</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/password.jpg') }}" alt="Gerar Password">
+          <div class="card-header">
+            <h3>Gerar Password</h3>
+            <button class="btn-ver-projeto" data-video="{{ url_for('static', filename='videos/password.mp4') }}">Ver Projeto</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="{{ url_for('static', filename='images/jogos.png') }}" alt="Jogos Simples">
+          <div class="card-header">
+            <h3>Jogos Simples</h3>
+            <button class="btn-ver-projeto" data-video="{{ url_for('static', filename='videos/jogos.mp4') }}">Ver Projeto</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contactos" class="section">
+      <h2>Contacte-me</h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <i data-lucide="map-pin"></i>
+          <div>
+            <p><strong>Morada</strong></p>
+            <p>4435-005 Rio Tinto</p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <i data-lucide="mail"></i>
+          <div>
+            <p><strong>Email</strong></p>
+            <p>ruben.cast.silva@gmail.com</p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <i data-lucide="phone"></i>
+          <div>
+            <p><strong>Telefone</strong></p>
+            <p>+351 915 891 367</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="social-links">
+        <a href="https://www.instagram.com/rubendcsilva/" class="social-link" target="_blank">
+          <i data-lucide="instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/ruben-silva-3b576b389/?trk=public-profile-join-page" class="social-link" target="_blank">
+          <i data-lucide="linkedin"></i>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100018575085061&locale=pt_PT" class="social-link"
+          target="_blank">
+          <i data-lucide="facebook"></i>
+        </a>
+      </div>
+    </section>
+    <!-- Botões fixos no canto -->
+    <div class="bottom-buttons">
+      <button id="scrollTopBtn" title="Voltar ao topo">
+        <i data-lucide="arrow-up"></i>
+      </button>
+      <button id="themeToggle" title="Alternar Tema">
+        ☀️
+      </button>
+    </div>
+    <footer class="footer">© <span id="year"></span> Ruben Silva</footer>
+  </main>
+
+  <script src="static/ruben_script.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+
+</html>
