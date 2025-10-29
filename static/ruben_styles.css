@@ -1001,3 +1001,93 @@ a {
   padding-right: 10px;
   position: relative;
 }
+
+
+/* =================== HERO RESPONSIVO DINÂMICO =================== */
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  min-height: 80vh;
+  flex-wrap: wrap; /* permite quebra de linha em telas pequenas */
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 250px; /* evita ficar muito estreito */
+}
+
+.hero-text h1 {
+  font-size: clamp(1.8rem, 4vw, 2.9rem); /* ajusta conforme largura da tela */
+  line-height: 1.2;
+}
+
+.hero-text p {
+  font-size: clamp(1rem, 2.5vw, 1.3rem); /* texto responsivo */
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.hero-image {
+  flex: 0 0 auto;
+  width: clamp(150px, 25%, 300px); /* largura dinâmica */
+  display: flex;
+  justify-content: center;
+}
+
+.profile-photo {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1; /* mantém círculo perfeito */
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(59, 130, 246, 0.4);
+}
+
+/* =================== DADOS PESSOAIS ICON + TITULO =================== */
+.dados-card {
+  display: flex;
+  align-items: center; /* título na mesma linha do ícone */
+  gap: 1rem;
+}
+
+.dados-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
+.dados-card p {
+  margin: 0;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+/* =================== SIDEBAR CENTRADA VERTICAL =================== */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centraliza verticalmente os itens */
+  align-items: center;
+  width: 80px;
+  background: var(--sidebar);
+  padding: 2rem 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
