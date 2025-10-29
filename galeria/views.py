@@ -1,5 +1,5 @@
 from flask import render_template, request, jsonify
-from app import app, mail
+from app import app
 from flask_mail import Message
 
 # Rota principal -> abre templates/index.html
