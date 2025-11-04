@@ -165,11 +165,20 @@ body {
     border: 3px solid var(--accent);
 }
 
-/* Print Button Section */
+/* Print Button Section - SOLUÇÃO DEFINITIVA */
 .print-section {
     display: flex;
     justify-content: center;
     margin: 3rem 0;
+    width: 100%;
+}
+
+.print-section .print-btn-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1600px; /* Mesma largura máxima das outras seções */
+    margin: 0 auto;
 }
 
 .print-btn {
@@ -192,6 +201,26 @@ body {
     background: #2563eb;
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+}
+
+/* Ajuste para modo claro */
+.light .print-btn {
+    background: linear-gradient(135deg, var(--accent), #00c6ff);
+    color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.light .print-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .print-btn {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 /* Dados Pessoais Section */
