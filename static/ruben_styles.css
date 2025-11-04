@@ -1204,3 +1204,66 @@ a {
         right: 75px;
     }
 }
+
+/* =================== CORREÇÃO HERO MOBILE =================== */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem !important; /* Reduz o espaçamento vertical */
+        min-height: auto !important; /* Remove altura mínima fixa */
+        padding: 1rem 0; /* Adiciona padding vertical */
+    }
+    
+    .hero-text {
+        order: 1; /* Texto primeiro */
+        padding: 0 1rem;
+    }
+    
+    .hero-image {
+        order: 2; /* Imagem depois */
+        width: 200px !important;
+        margin: 0 auto;
+        padding: 0;
+    }
+    
+    .hero h1 {
+        font-size: 2rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .hero p {
+        font-size: 1rem !important;
+        margin-bottom: 0 !important;
+    }
+    
+    .profile-photo {
+        width: 180px !important;
+        height: 180px !important;
+        margin: 0 auto;
+    }
+}
+
+/* Para ecrãs muito pequenos */
+@media (max-width: 480px) {
+    .hero-content {
+        gap: 1rem !important; /* Espaçamento ainda menor */
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem !important;
+    }
+    
+    .hero p {
+        font-size: 0.9rem !important;
+    }
+    
+    .hero-image {
+        width: 160px !important;
+    }
+    
+    .profile-photo {
+        width: 150px !important;
+        height: 150px !important;
+    }
+}
