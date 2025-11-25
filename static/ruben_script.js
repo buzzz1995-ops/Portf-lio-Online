@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", function () {
     const element = document.getElementById("typing");
-    const texts = ["Ruben Silva", "Programador Web", "Criador Digital"];
+    const texts = ["Ruben Silva", "Apaixonado por Python", "Web Designer", "Programador Web"];
     let textIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
